@@ -1,0 +1,17 @@
+#guessArray {
+    margin: 10px auto;
+}
+
+.guessButtons {
+   background-color: #B3C0A4;
+   width: 25%;
+   margin: 2px auto;
+   border-radius: 10px;
+}
+
+#guessInput {
+    background-color: #B3C0A4;
+    width: fit-content;
+    margin: 2px auto;
+    border-radius: 10px;
+}

@@ -1,0 +1,17 @@
+
+.row {
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: fit-content;
+    background-color: #B3C0A4;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px auto;
+}

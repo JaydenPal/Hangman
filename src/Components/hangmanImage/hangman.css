@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    width: fit-content;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rightSide{
+    justify-self: end;
+    margin-right: 8px;
+}
+#head{
+    margin-right: 5px;
+}
+
+#torsoAndArms, #legs {
+    margin-right: 5px;
+}
+

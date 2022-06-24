@@ -1,0 +1,8 @@
+.letterButton {
+    background-color: #B3C0A4;
+    border-radius: 5px;
+}
+
+.letterButton:hover {
+    background-color: #DCC48E;
+}
