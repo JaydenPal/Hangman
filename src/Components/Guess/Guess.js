@@ -19,6 +19,7 @@ export function Guess(props){
         setWordlen(word.length);
         setWordAsArr(word.split(''))
         document.getElementById('winningMessage').style.display = 'none';
+        document.getElementById('losingMessage').style.display = 'none';
     }, [word])
 
     useEffect(() => {
@@ -49,12 +50,13 @@ export function Guess(props){
     }).then(() => {
         setWordAsArr(word.split(''));
     })
+    // let words = ["word", "dictionary", "yellow", "diamond", "rainbow", "depression"]
+    // let newWord = words[Math.floor(Math.random() * 6)]
+    // setWord(newWord);
     rerenderKeybaord();
     props.setNumberOfIncorrect(0);
 
-        // let words = ["word", "dictionary", "yellow", "diamond", "rainbow", "depression"]
-        // let newWord = words[Math.floor(Math.random() * 6)]
-        // setWord(newWord);
+        
     }
 
     const handleTermChange = (e) => {
@@ -63,6 +65,9 @@ export function Guess(props){
 
 
     const handleGuess = () => {
+        if(props.numberOfIncorrect == 6){
+            return null;
+        }
         if(!guess){
             return null;
         }
@@ -92,7 +97,6 @@ export function Guess(props){
     wordAsArr.forEach((letter) => {
         if(letter.toLowerCase() == guess.toLowerCase()){
             arr[index] = letter;
-            console.log("hello");
             isCorrect = true;
         }
         index++;
@@ -118,13 +122,14 @@ export function Guess(props){
             <Keyboard setGuess={setGuess} guess={guess}/>
             <div className="Guess" style={{display: 'flex', flexDirection:'column' }}>
                 <div style={{alignSelf: 'center'}}>
-                    <p id='guessArray' style={{letterSpacing:'10px'}}>{toGuessArr} | {wordlen}</p>
-                    <p id='winningMessage' style={{display: 'none'}}>You Win!!!</p>
+                    <p id='guessArray' style={{letterSpacing:'5px'}}>{toGuessArr} | {wordlen}</p>
+                    <p id='winningMessage' style={{display: 'none'}}>You won!</p>
+                    <p id='losingMessage' style={{display: 'none'}}>You lost!</p>
                 </div>
                 <div style={{width: '60%', display:'flex', flexDirection:'column', alignSelf:'center'}}>
-                    <input id='guessInput' onChange={handleTermChange} placeholder="Enter your guess.." />
                     <button className='guessButtons' onClick={handleGuess}>Guess</button>
                     <button className='guessButtons' onClick={getRandomWord}>Get New Word</button>
+                    <input id='guessInput' onChange={handleTermChange} placeholder="Enter your guess.." />
                 </div>
             </div>
         </div>

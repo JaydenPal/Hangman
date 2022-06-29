@@ -2,16 +2,15 @@
     margin: 10px auto;
 }
 
-.guessButtons {
-   background-color: #B3C0A4;
+.guessButtons, #guessInput{
+   background-color: rgba(224, 214, 214, 0.4);
    width: 25%;
    margin: 2px auto;
    border-radius: 10px;
+   border: 1px solid #000;
+   
 }
 
-#guessInput {
-    background-color: #B3C0A4;
-    width: fit-content;
-    margin: 2px auto;
-    border-radius: 10px;
+button:active {
+    box-shadow: 1px 1px 1px;
 }

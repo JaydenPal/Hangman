@@ -1,25 +1,64 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 100px 300px 300px 100px;
+  height: fit-content;
+  background-color: #fff;
+}
+.side {
+  background-color: #282c34;
+  grid-column: 3/4;
+  grid-row: 1/4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
 h1 {
   text-align: center;
-  color: #EAEFD3;
+  color: black;
   margin: 0 auto;
 }
 
 header {
-  background-color: #505168;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  padding: 10px;
+  margin: 0;
+  grid-row: 1/1;
+  grid-column: 2/2;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+footer{
+  background-color: white;
   padding: 20px;
   text-align: center;
   padding: 10px;
-  margin: 0;
+  grid-row: 4/4;
+  grid-column: 1/4;
+  border-top: 1px solid black;
 }
 
 .rules {
-  color: #EAEFD3;
+  color: black;
+  background-color: white;
   width: fit-content;
-  margin: 2px auto;
+  padding: 5px;
+  margin: 0;
+  grid-row: 1 / 4;
+  grid-column: 1/1;
+  /* overflow: scroll; */
+  border-right: 1px solid black;
 }
 
 .rules h2 {
-  width: fit-content;
+  width: 100%;
 }
 
 ul{
@@ -30,6 +69,18 @@ li{
   list-style-type: none;
   margin: 5px auto;
 }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0;
+  border-right: 1px solid black;
+  grid-column: 2/2;
+  grid-row: 2/3;
+  height: 600px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

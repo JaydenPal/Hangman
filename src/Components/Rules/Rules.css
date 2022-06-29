@@ -1,0 +1,10 @@
+.rules li {
+    font-size: .9em;
+    list-style: ;
+    
+}
+
+ul > li:before {
+    content: "-";
+    text-indent: -20px;
+  }

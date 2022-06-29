@@ -20,8 +20,6 @@ const returnHangmanImage = (head, torsoAndArms, legs) => {
    {torsoAndArms}
    <p>|</p>
    {legs}
-   <p>|</p> 
-   <br></br>
    <p>|</p>
    <br></br>
    <p>|</p>
@@ -30,8 +28,10 @@ const returnHangmanImage = (head, torsoAndArms, legs) => {
    <br></br>
    <p>|</p>
    <br></br>
-   <p className="bottomOfHangman">============</p>
-   <p className="bottomOfHangman">============</p>
+   <p>|</p>
+   <br></br>
+   <p className="bottomOfHangman">=============</p>
+   <p className="bottomOfHangman">=============</p>
 </div>
     );
    }

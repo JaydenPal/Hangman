@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     width: fit-content;
-    margin: auto;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto, 1fr);
 }
