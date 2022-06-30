@@ -128,7 +128,7 @@ export function Guess(props){
                     <p id='winningMessage' style={{display: 'none'}}>You won!</p>
                     <p id='losingMessage' style={{display: 'none'}}>You lost :( The word was {word}!</p>
                 </div>
-                <div style={{width: '60%', display:'flex', flexDirection:'column', alignSelf:'center'}}>
+                <div style={{width: '60%', display:'flex', flexDirection:'column', alignSelf:'center', alignContent:'center', justifyContent:'center'}}>
                     <input id='guessInput' onChange={handleTermChange} placeholder="Enter your guess.." />
                     <button className='guessButtons' onClick={handleGuess}>Guess</button>
                     <button className='guessButtons' onClick={getRandomWord}>Get New Word</button>

@@ -11,11 +11,6 @@
   grid-row: 1/4;
 }
 
-::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
-}
-
 h1 {
   text-align: center;
   color: black;
@@ -117,6 +112,12 @@ li{
   .mainContainer {
     border-right: none;
   }
+
+  button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    }
 
 
 }

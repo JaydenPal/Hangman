@@ -1,8 +1,15 @@
 .letterButton {
+    -webkit-appearance: none;
     background-color: #fff;;
     border-radius: 5px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.letterButton:active {
+    box-shadow: 1px 1px 1px;
 }
 
 .letterButton:hover {
-    background-color: #DCC48E;
+    background-color: #c5c5c5b0;
 }
