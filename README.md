@@ -10,4 +10,5 @@ This app was made using React with html, css, and javascript. Launched with surg
 
 ## Links
 Project: hangman_project.surge.sh\n
+
 Random Word API Repository: https://github.com/mcnaveen/Random-Words-API
