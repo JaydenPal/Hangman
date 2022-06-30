@@ -4,6 +4,7 @@ import {Guess} from '../Guess/Guess.js';
 import Hangman from '../hangmanImage/Hangman.js';
 import Rules from '../Rules/Rules';
 import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
 import { useEffect, useState } from 'react';
 
 function App(){
@@ -15,18 +16,16 @@ function App(){
   }, [numberOfIncorrect])
     return ( 
     <div className='App'>
-      <Rules />
       <header>
           <h1>Hangman</h1>
       </header>
+      <Rules />
       <div className='mainContainer'>
             <Hangman numberOfIncorrect={numberOfIncorrect}/>
             <Guess numberOfIncorrect={numberOfIncorrect} setNumberOfIncorrect={setNumberOfIncorrect} />
       </div>
       <Projects className='side'/>
-      <footer>
-          <p>Created by Jayden Palacios</p>
-      </footer>
+      <Contact className="footer" />
     </div>
     );
   }

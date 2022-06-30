@@ -11,6 +11,16 @@
    
 }
 
+#winningMessage, #losingMessage{
+    margin: 5px auto;
+}
+
 button:active {
     box-shadow: 1px 1px 1px;
+}
+
+@media screen and (max-width: 1060px) {
+    .guessButtons, #guessInput {
+        width: 100%;
+    }
 }

@@ -82,6 +82,8 @@ export function Guess(props){
    const guessWord = () => {
     if(guess.toLowerCase() == word.toLowerCase()){
         setToGuessArr(guess.toLowerCase().split(''));
+    } else {
+        props.setNumberOfIncorrect(props.numberOfIncorrect + 1);
     }
     } 
     const handleNumOfIncorrect = () => {
@@ -124,12 +126,12 @@ export function Guess(props){
                 <div style={{alignSelf: 'center'}}>
                     <p id='guessArray' style={{letterSpacing:'5px'}}>{toGuessArr} | {wordlen}</p>
                     <p id='winningMessage' style={{display: 'none'}}>You won!</p>
-                    <p id='losingMessage' style={{display: 'none'}}>You lost!</p>
+                    <p id='losingMessage' style={{display: 'none'}}>You lost :( The word was {word}!</p>
                 </div>
                 <div style={{width: '60%', display:'flex', flexDirection:'column', alignSelf:'center'}}>
+                    <input id='guessInput' onChange={handleTermChange} placeholder="Enter your guess.." />
                     <button className='guessButtons' onClick={handleGuess}>Guess</button>
                     <button className='guessButtons' onClick={getRandomWord}>Get New Word</button>
-                    <input id='guessInput' onChange={handleTermChange} placeholder="Enter your guess.." />
                 </div>
             </div>
         </div>

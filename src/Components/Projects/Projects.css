@@ -9,7 +9,14 @@ h3 {
     text-align: center;
 }
 
+
 .projects {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.projectName {
     text-align: center;
     margin-bottom: 10px;
     border-bottom: 1px solid #e6e6e6;
@@ -18,3 +25,29 @@ h3 {
 img:hover {
     box-shadow: 3px 3px 3px #000;
 }
+
+@media screen and (max-width: 1060px) {
+ 
+    .projectContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .projects{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .project {
+        width: 200px;
+        margin-right: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .projectName {
+        border-bottom: none;
+        font-size: .7em;
+    }
+  }

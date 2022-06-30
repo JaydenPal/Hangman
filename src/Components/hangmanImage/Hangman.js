@@ -46,7 +46,7 @@ const returnHangmanImage = (head, torsoAndArms, legs) => {
             return hangmanImage;
         case 2:
             head = <p id='head' className='rightSide'>O</p>
-            torsoAndArms = <p id='torsoAndArms' className='rightSide'>|.</p>
+            torsoAndArms = <p id='torsoAndArms' className='rightSide'>|<em id="periodToHide">.</em></p>
             hangmanImage = returnHangmanImage(head, torsoAndArms, legs);
             return hangmanImage;
         case 3:

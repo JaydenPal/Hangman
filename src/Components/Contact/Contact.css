@@ -1,0 +1,48 @@
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: fit-content;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nameDrop {
+    font-size: .5em;
+}
+
+.contact > .contactContainer > h3 {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.contactContainer > ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1060px) {
+    .contactContainer {
+        position: static;
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .contactContainer > h3 {
+        text-align: center;
+    }
+    .contact {
+        padding: 0;
+    }
+
+    #nameDrop {
+        position: relative;
+        font-size: .5em;
+    }
+    
+}

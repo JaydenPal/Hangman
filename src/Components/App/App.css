@@ -35,7 +35,7 @@ header {
   border-right: 1px solid black;
 }
 
-footer{
+.contact{
   background-color: white;
   padding: 20px;
   text-align: center;
@@ -43,22 +43,6 @@ footer{
   grid-row: 4/4;
   grid-column: 1/4;
   border-top: 1px solid black;
-}
-
-.rules {
-  color: black;
-  background-color: white;
-  width: fit-content;
-  padding: 5px;
-  margin: 0;
-  grid-row: 1 / 4;
-  grid-column: 1/1;
-  /* overflow: scroll; */
-  border-right: 1px solid black;
-}
-
-.rules h2 {
-  width: 100%;
 }
 
 ul{
@@ -114,4 +98,25 @@ li{
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 1060px) {
+  #root {
+    height: 1000px;
+}
+  .App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  header {
+    border-right: none;
+  }
+
+  .mainContainer {
+    border-right: none;
+  }
+
+
 }

@@ -1,10 +1,95 @@
-.rules li {
-    font-size: .9em;
-    list-style: ;
-    
+@media screen and (min-width: 1060px) {
+.rules li, .rules .about {
+    font-size: .9em; 
 }
-
+ul, .rules .about {
+  padding-left: 5px;
+}
 ul > li:before {
     content: "-";
     text-indent: -20px;
   }
+  .rules {
+    color: black;
+    background-color: white;
+    height: 100%;
+    width: fit-content;
+    padding: 5px;
+    margin: 0;
+    grid-row: 1 / 4;
+    grid-column: 1/1;
+    /* overflow: scroll; */
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .rules h2 {
+    width: 100%;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+}
+  @media screen and (max-width: 1060px) {
+    .rules {
+      height: fit-content;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+    }
+    .buttons:active {
+      box-shadow: none;
+    }
+
+    .rulesList, .about {
+      display: none;
+    }
+    .howToPlay {
+      display: flex;
+      border-bottom: 1px solid black;
+      align-content: start;
+    }
+     
+    .hangmanInfo {
+      display: none;
+    }
+
+    .buttons {
+      display: block;
+      border: none;
+      background-color: white;
+    }
+
+    .buttons:hover {
+      cursor: pointer;
+    }
+    .rules h2 {
+      margin: 5px;
+      width: fit-content;
+    }
+
+    .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    ul, .rules .about {
+      padding-left: 5px;
+    }
+    ul > li:before {
+        content: "-";
+        text-indent: -20px;
+      }
+  }
+    
