@@ -8,6 +8,7 @@ import Contact from '../Contact/Contact';
 import { useEffect, useState } from 'react';
 
 function App(){
+  //keep track of the number of incorrect guesses and update image dpending on number of incorrect guesses
   const [numberOfIncorrect, setNumberOfIncorrect] = useState(0);
   useEffect(() => {
     if(numberOfIncorrect == 6){
@@ -20,7 +21,8 @@ function App(){
           <h1>Hangman</h1>
       </header>
       <Rules />
-      <div className='mainContainer'>
+      <div className='mainContainer'> 
+            {/* pass state and functions to components that need to aceess or alter it */}
             <Hangman numberOfIncorrect={numberOfIncorrect}/>
             <Guess numberOfIncorrect={numberOfIncorrect} setNumberOfIncorrect={setNumberOfIncorrect} />
       </div>

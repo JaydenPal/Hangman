@@ -2,12 +2,6 @@ import LetterKey from "../LetterKeys/LetterKey.js";
 import React, { useEffect, useState } from 'react';
 import './Keyboard.css';
 
-
-const rowStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center'
-}
 function Keyboard(props){
     const handleClick = (e) => {
         props.setGuess(e.target.innerText);

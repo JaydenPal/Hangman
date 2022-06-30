@@ -3,7 +3,7 @@ function Hangman(props){
 let head = <br></br>;
 let torsoAndArms = <br></br>;
 let legs = <br></br>;
-const returnHangmanImage = (head, torsoAndArms, legs) => { 
+const returnHangmanImage = (head, torsoAndArms, legs) => {  //create textbased image for hangman with dynamic parts 
     return (
 <div className='grid'>
    <p className="topOfHangman">______________</p>
@@ -37,6 +37,7 @@ const returnHangmanImage = (head, torsoAndArms, legs) => {
    }
    let hangmanImage;
     switch(props.numberOfIncorrect){
+        //display certain parts of hangman depending on number of incorrect guesses
         case 0: 
             hangmanImage = returnHangmanImage(head, torsoAndArms, legs);
             return hangmanImage;

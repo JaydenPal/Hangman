@@ -1,5 +1,6 @@
 import './Rules.css';
 function Rules (){
+    //functions for mobile users to toggle info in each section
     const handleClick = () => {
         document.getElementsByClassName("rulesList")[0].style.display == 'block' ? 
         document.getElementsByClassName("rulesList")[0].style.display = 'none': 
@@ -10,10 +11,9 @@ function Rules (){
         document.getElementsByClassName("about")[0].style.display = 'none': 
         document.getElementsByClassName("about")[0].style.display = 'block'
     }
-
+    //track width of of window and display rules or about depending on width
     window.addEventListener('resize', function(event){
         var newWidth = window.innerWidth;
-        var newHeight = window.innerHeight; 
         if(newWidth > 1060){
             document.getElementsByClassName("rulesList")[0].style.display = 'block';
             document.getElementsByClassName("about")[0].style.display = 'block';
